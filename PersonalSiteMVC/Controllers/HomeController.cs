@@ -13,7 +13,7 @@ namespace PersonalSiteMVC.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Resume()
         {
             ViewBag.Message = "Your application description page.";
 
@@ -26,5 +26,6 @@ namespace PersonalSiteMVC.Controllers
 
             return View();
         }
+
     }
 }
