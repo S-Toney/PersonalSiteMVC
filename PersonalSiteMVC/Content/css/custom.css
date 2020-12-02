@@ -1,0 +1,88 @@
+﻿body {
+}
+
+.resume {
+    padding: 7em 0;
+    clear: both;
+}
+
+@media screen and (max-width: 768px) {
+    resume {
+        padding: 3em 0;
+    }
+}
+
+/* CONTACT PAGE W/GOOGLE MAPS BACKGROUND */
+#googlemaps {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+
+#contactform {
+    position: relative;
+    z-index: 1; /* The z-index should be higher than Google Maps */
+    max-width: 90%;
+    margin: 3em;
+    padding: 3em;
+    background-color: rgba(0, 0, 0, 0.5); /* Set to 0.5 for a slightly transparent Form */
+    height: auto;
+    color: white;
+}
+
+input.form-control {
+    margin: 1em;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #495057;
+    border-color: #495057;
+}
+
+    .btn-dark:hover { /*HOVER IS NOT FUNCTIONING*/
+        color: #fff;
+        background-color: #253259 !important;
+        border-color: #253259;
+    }
+
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+/* Lightbox */
+
+.thumb {
+    cursor: pointer;
+}
+
+#lightbox-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    padding-top: 65px;
+    display: none;
+    overflow-x:scroll; /* This allows the lightbox to scroll down instead of the page scrolling behind it when the img drops below the fold */
+}
+
+#lightbox-container p {
+    color: #fff;
+}
+
+#lightbox-container img {
+    border: 10px solid gray;
+    margin: auto;
+}
+
