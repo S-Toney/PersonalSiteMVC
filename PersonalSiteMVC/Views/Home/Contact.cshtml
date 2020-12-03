@@ -25,45 +25,62 @@
     </section>
     <hr class="mb-2" />
     <!-- CONTACT FORM W/GOOGLE MAPS BACKGROUND -->
-    <section>
-        <div id="maps"></div>
-        <form id="contactform">
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" class="form-control col-form-label my-2" placeholder="First name">
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <h3 class="text-danger">@Html.Raw(ViewBag.ErrorMessage)</h3>
+    }
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <section>
+            <div id="maps"></div>
+            <form id="contactform">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "First Name" } })
+                        @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col">
+                        @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name" } })
+                        @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control my-2" placeholder="Last name">
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company (Optional)" } })
+                        @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" class="form-control my-2" placeholder="Company (optional)">
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control", @placeholder = "Your Position (Optional)" } })
+                        @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" class="form-control my-2" placeholder="Your Position (optional)">
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Your email address" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" class="form-control my-2" placeholder="Your email address">
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", @placeholder = "Subject" } })
+                        @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" class="form-control my-2" placeholder="Subject">
+                <div class="form-row">
+                    <div class="col">
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control ml-3 mt-3", @placeholder = "Your message..." } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <textarea type="text" class="form-control my-2" placeholder="Your Message"></textarea>
+                <div class="form-row">
+                    <input type="submit" name="submit button" value="Send Message" class="btn btn-dark button mx-4 my-2" />
                 </div>
-            </div>
-            <div class="form-row">
-                <input type="submit" name="submit button" value="Submit" class="btn btn-dark button mx-4 my-2" />
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
+    }
 </div>

@@ -1,16 +1,16 @@
-﻿
+﻿@model PersonalSiteMVC.Models.ContactViewModel
 @{
     ViewBag.Title = "EMailConfirmation";
 }
 
 <h2>@ViewBag.Title</h2>
 
-<h3>Thank you @Model.Name</h3>
+<h3>Thank you @Model.firstName</h3>
 <p>
     We have recieved your email, and will respond soon. Details of your message are bleow.
 </p>
 <p>
-    Name: @Model.Name
+    Name: @Model.firstName @Model.lastName
     <br />
     Email: @Model.Email
     <br />
