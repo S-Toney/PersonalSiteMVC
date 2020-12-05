@@ -139,6 +139,9 @@
     <Content Include="Content\img\jds.png" />
     <Content Include="Content\img\profile.jpg" />
     <Content Include="Content\img\profile1.jpg" />
+    <Content Include="Content\img\projectPersonalSite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\recipe.png" />
     <Content Include="Content\img\sayCheese.jpg" />
     <Content Include="Content\img\spenser.jpg" />
@@ -180,6 +183,7 @@
     <Content Include="Views\Home\Links.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\EMailConfirmation.cshtml" />
+    <Content Include="Views\Home\Thumbnail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
