@@ -137,16 +137,10 @@
     <None Include="Content\img\censusEndorsement.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Content\img\david.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Content\img\favicon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\img\fed1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\img\jds.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\img\profile.jpg">
@@ -164,15 +158,16 @@
     <None Include="Content\img\sayCheese.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Content\img\spenser.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Content\img\thankYouNote.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\img\yestojess.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="Content\img\davidSee.jpg" />
+    <Content Include="Content\img\johnSwift.jpg" />
+    <Content Include="Content\img\michaelBell.jpg" />
+    <Content Include="Content\img\spenserPearson.jpg" />
     <Content Include="Content\js\custom.js" />
     <Content Include="Content\js\jQuery.js" />
     <Content Include="Content\js\scripts.js" />

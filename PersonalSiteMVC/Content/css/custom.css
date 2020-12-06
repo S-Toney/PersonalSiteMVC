@@ -6,6 +6,10 @@
     clear: both;
 }
 
+.shadow {
+    box-shadow: 3px 2px 5px #253259;
+}
+
 @media screen and (max-width: 768px) {
     resume {
         padding: 3em 0;
@@ -86,3 +90,13 @@ input.form-control {
     margin: auto;
 }
 
+/* Card CSS */
+.link-name {
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px #253259;
+}
+
+.card {
+    box-shadow: 2px 2px 5px #253259;
+}
