@@ -165,6 +165,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Content\img\davidSee.jpg" />
+    <Content Include="Content\img\isaac.jpg" />
+    <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
     <Content Include="Content\img\spenserPearson.jpg" />

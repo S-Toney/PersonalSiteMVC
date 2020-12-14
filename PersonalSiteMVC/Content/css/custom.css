@@ -100,3 +100,9 @@ input.form-control {
 .card {
     box-shadow: 2px 2px 5px #253259;
 }
+
+.card-img {
+    max-width: auto;
+    margin: 3%;
+    box-shadow: 3px 3px 5px #253259;
+}
