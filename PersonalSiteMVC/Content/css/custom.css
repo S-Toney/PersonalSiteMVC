@@ -102,7 +102,7 @@ input.form-control {
 }
 
 .card-img {
-    max-width: auto;
+    width: auto;
     margin: 3%;
     box-shadow: 3px 3px 5px #253259;
 }
