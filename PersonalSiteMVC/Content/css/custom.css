@@ -94,7 +94,12 @@ input.form-control {
 .link-name {
     text-align: center;
     color: aliceblue;
-    text-shadow: 2px 2px 5px #253259;
+    text-shadow: 7px 7px 5px #253259;
+    font-size: 2.5em;
+}
+.link-name:hover {
+    text-shadow: 7px 7px 5px aliceblue;
+    color: #253259;
 }
 
 .card {
@@ -106,3 +111,5 @@ input.form-control {
     margin: 3%;
     box-shadow: 5px 5px 5px #253259;
 }
+
+
