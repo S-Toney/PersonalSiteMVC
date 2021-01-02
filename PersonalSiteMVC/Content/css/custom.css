@@ -114,7 +114,7 @@ input.form-control {
 
 /* Animations */
 .slide {
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: slidein;
 }
 @keyframes slidein {
