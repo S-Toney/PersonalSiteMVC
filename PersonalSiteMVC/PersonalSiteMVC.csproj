@@ -170,6 +170,9 @@
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
     <Content Include="Content\img\spenserPearson.jpg" />
+    <Content Include="Content\img\storefront.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\custom.js" />
     <Content Include="Content\js\jQuery.js" />
     <Content Include="Content\js\scripts.js" />
