@@ -129,7 +129,7 @@ input.form-control {
 }
 
 /* Projects Page Sections */
-section.project {
+.project {
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -139,21 +139,21 @@ section.project {
     max-width: 75rem;
 }
 
-    section.project .project {
-        width: 100%;
-    }
-
 @media (min-width: 768px) {
-    section.project {
+    .project {
         min-height: 100vh;
     }
 }
 
 @media (min-width: 992px) {
-    section.project {
+    .project {
         padding-left: 3rem;
         padding-right: 3rem;
         padding-top: 1rem;
         padding-bottom: 0;
     }
+}
+
+.project-img {
+    border: 1px solid #253259;
 }

@@ -173,6 +173,9 @@
     <Content Include="Content\img\storefront.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\img\yestojessb4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\custom.js" />
     <Content Include="Content\js\jQuery.js" />
     <Content Include="Content\js\scripts.js" />
