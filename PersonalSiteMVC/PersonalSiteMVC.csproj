@@ -169,6 +169,9 @@
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
+    <Content Include="Content\img\serenity.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\spenserPearson.jpg" />
     <Content Include="Content\img\storefront.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
