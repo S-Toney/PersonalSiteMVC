@@ -157,3 +157,16 @@ input.form-control {
 .project-img {
     border: 1px solid #253259;
 }
+
+/* Font Awesome Unicode Switch classes */
+.pdf {
+    list-style: none;
+}
+
+    .pdf i::before {
+        content: "\f1c1";
+    }
+
+    .pdf:hover i::before {
+        content: "\f1c1";
+    }
