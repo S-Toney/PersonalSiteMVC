@@ -158,7 +158,7 @@ input.form-control {
     border: 1px solid #253259;
 }
 
-/* Font Awesome Unicode Switch classes */
+/* Font Awesome Unicode Switch classes 
 .pdf {
     list-style: none;
 }
@@ -169,4 +169,11 @@ input.form-control {
 
     .pdf:hover i::before {
         content: "\f1c1";
+    }*/
+
+.pdf {
+    color: #495057;
+}
+    .pdf:hover {
+        color: #253259;
     }
