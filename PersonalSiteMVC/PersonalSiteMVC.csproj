@@ -166,12 +166,15 @@
     </None>
     <Content Include="Content\img\CentriqAttendance.png" />
     <Content Include="Content\img\CentriqCompletion.png" />
+    <Content Include="Content\img\cum-laude-medal-front.jpg" />
     <Content Include="Content\img\davidSee.jpg" />
     <Content Include="Content\img\fte.png" />
     <Content Include="Content\img\isaac.jpg" />
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
+    <Content Include="Content\img\NSCS_Logo_Smaller.png" />
+    <Content Include="Content\img\nsls-logo.png" />
     <Content Include="Content\img\serenity.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
