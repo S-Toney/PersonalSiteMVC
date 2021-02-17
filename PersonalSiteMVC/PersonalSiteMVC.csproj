@@ -175,6 +175,7 @@
     <Content Include="Content\img\michaelBell.jpg" />
     <Content Include="Content\img\NSCS_Logo_Smaller.png" />
     <Content Include="Content\img\nsls-logo.png" />
+    <Content Include="Content\img\sac.png" />
     <Content Include="Content\img\serenity.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
