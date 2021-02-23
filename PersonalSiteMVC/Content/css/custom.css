@@ -6,6 +6,13 @@
     clear: both;
 }
 
+.resumeImg {
+    /*max-width: 25%;*/
+    max-width: 170px;
+    height: auto;
+    margin: 1em;
+}
+
 .shadow {
     box-shadow: 3px 2px 5px #253259;
 }
