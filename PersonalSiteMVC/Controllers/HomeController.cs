@@ -59,7 +59,7 @@ namespace PersonalSiteMVC.Controllers
 
             msg.IsBodyHtml = true; 
             SmtpClient client = new SmtpClient("mail.tessatoney.com");
-            client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "20Cen$us20");//change to ****** before pushing to GitHub but use password for deploy
+            client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "24qBIjF@d0");//change to ****** before pushing to GitHub but use password for deploy
            // SmtpClient port = new SmtpClient("smtp.Port = 8889;");
            // SmtpClient port = 8889;
             try
@@ -88,6 +88,11 @@ namespace PersonalSiteMVC.Controllers
         }
 
         public ActionResult Thumbnail()
+        {
+            return View();
+        }
+
+        public ActionResult Undeliverable()
         {
             return View();
         }

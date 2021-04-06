@@ -224,6 +224,7 @@
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\EMailConfirmation.cshtml" />
     <Content Include="Views\Home\Thumbnail.cshtml" />
+    <Content Include="Views\Home\Undeliverable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
