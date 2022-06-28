@@ -59,7 +59,7 @@ namespace PersonalSiteMVC.Controllers
 
             msg.IsBodyHtml = true; 
             SmtpClient client = new SmtpClient("mail.tessatoney.com");
-            client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "24qBIjF@d0");//change to ****** before pushing to GitHub but use password for deploy
+            client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "N3wP@ss21");//change to ****** before pushing to GitHub but use password for deploy
            // SmtpClient port = new SmtpClient("smtp.Port = 8889;");
            // SmtpClient port = 8889;
             try
@@ -69,6 +69,7 @@ namespace PersonalSiteMVC.Controllers
             }
             catch (Exception ex)
             {
+                //TODO Implement custom error response
                 ViewBag.ErrorMessage = $"Sorry, something went wrong. Error message : {ex.Message}<br />{ex.StackTrace}";
                 return View(cvm);
             }
