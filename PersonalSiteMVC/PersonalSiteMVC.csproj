@@ -170,9 +170,12 @@
     <Content Include="Content\img\CentriqAttendance.png" />
     <Content Include="Content\img\CentriqCompletion.png" />
     <Content Include="Content\img\cum-laude-medal-front.jpg" />
+    <Content Include="Content\img\david-see.jpg" />
     <Content Include="Content\img\davidSee.jpg" />
     <Content Include="Content\img\fte.png" />
     <Content Include="Content\img\isaac.jpg" />
+    <Content Include="Content\img\james.jpg" />
+    <Content Include="Content\img\john-swift.jpg" />
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
@@ -197,7 +200,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\TessaToneyResumeIT.pdf" />
+    <Content Include="Content\old_TessaToneyResumeIT.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

@@ -57,9 +57,9 @@ namespace PersonalSiteMVC.Controllers
                 emailBody
             );
 
-            msg.IsBodyHtml = true; 
-            SmtpClient client = new SmtpClient("mail.tessatoney.com");
-            client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "N3wP@ss21");//change to ****** before pushing to GitHub but use password for deploy
+            msg.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("192.168.0.200");//("mail.tessatoney.com");
+            //client.Credentials = new NetworkCredential("no-reply@tessatoney.com", "N3wP@ss21");//change to ****** before pushing to GitHub but use password for deploy
            // SmtpClient port = new SmtpClient("smtp.Port = 8889;");
            // SmtpClient port = 8889;
             try
