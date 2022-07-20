@@ -97,5 +97,14 @@ namespace PersonalSiteMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult Examples()
+        {
+            //string delUserHtml = "<div>\n<telerik:RadTextBox runat=\"server\"";
+            //delUser.InnerHtml = delUserHtml;
+
+            ViewData["delUserHtml"] = "does \n it \n work \n \"now\"<telerik:RadTextBox runat=\"server\" ID=\"boxDelUser\" Text=\"Delete User\" Skin=\"Web20\"></telerik:RadTextBox>";//"<div>\n<telerik:RadTextBox runat=\"server\" ID=\"boxDelUser\" Text=\"Delete User\" Skin=\"Web20\"></telerik:RadTextBox>";
+            return View();
+        }
     }
 }
