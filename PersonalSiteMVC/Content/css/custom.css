@@ -184,3 +184,9 @@ input.form-control {
     .pdf:hover {
         color: #253259;
     }
+
+    /* Tabbing CSS */
+.divTab1 {
+    margin: 0, 0, 0, 1.5rem!important;       
+    padding: 0, 0, 0, 1.5rem!important;
+}

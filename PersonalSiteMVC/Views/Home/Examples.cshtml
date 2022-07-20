@@ -5,44 +5,59 @@
 }
 
 <h2>Code Examples</h2>
-<div>
+<div class="pl-3">
     <h3>Delete a user:</h3>
     <div class="border-dark p-3">
         ASP.NET Webforms, Telerik UI Ajax, linked to a T-SQL stored procedure.<br />
 
         @* @(new HtmlString(ViewData["delUserHtml"].ToString()))
-        replacing < with &lt; or &60; and > with &gt;&gt; or &62;  *@
+            replacing < with &lt; or &60; and > with &gt;&gt; or &62;  *@
         <h4>HTML</h4>
-        &lt;div&gt;<br />
-        &lt;telerik:RadTextBox runat="server" ID="boxDelUser" Label="Delete User" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;<br />
-        &lt;telerik:RadButton runat="server" ID="btnDelUser" Text="Delete" OnClick="btnDelUser_Click" Skin="Web20"&gt;&lt;/telerik:RadButton&gt;<br />
-        &lt;telerik:RadLabel runat="server" ID="lblDelUser" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;<br />
+        <pre>
+            <code>
+        &lt;div class="box-r"&gt;
+            &lt;telerik:RadTextBox runat="server" ID="boxDelUser" Label="Delete User" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;
+            &lt;telerik:RadButton runat="server" ID="btnDelUser" Text="Delete" OnClick="btnDelUser_Click" Skin="Web20"&gt;&lt;/telerik:RadButton&gt;
+            &lt;telerik:RadLabel runat="server" ID="lblDelUser" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;
         &lt;/div&gt;
+            </code>
+        </pre>     
+        <h4>CSS</h4>
+        <pre>
+        <code>
+        .box-r {
+           width: 50%;
+           min-width: 325px;
+           border: solid 2px rgb(204,0,0);
+           box-shadow: rgba(107,0,0,.5) 7px 7px;
+           border-radius: 7px 8px;
+           background-color: white;
+           padding: 2em;
+           font-size: 20px;
+           margin-left: auto;
+           margin-right: auto;
+           text-align: center;
+        }
+        </code>
+        </pre>
         <h4>C#</h4>
-        protected boid btnDelUser_Click(object sender, EventArgs e)<br />
-        {<br />
-        string user = boxDelUser.Text;<br />
-        {<br />
-        try<br />
-        {<br />
-        {<br />
-        {<br />
-        Membership.DeleteUser(user);<br />
-        {<br />
-        }<br />
-        {<br />
-        catch (Exception ex)<br />
-        {<br />
-        {<br />
-        {<br />
-        lblDelUser.Text = $"An error occured when trying to delete this user: {ex}";<br />
-        {<br />
-        }<br />
-        {<br />
-        lblDelUser.Text = $"{user} has been deleted";<br />
-        {<br />
-        }<br />
-        {<br />
+        <pre>
+            <code>
+        protected boid btnDelUser_Click(object sender, EventArgs e)
+        {
+            string user = boxDelUser.Text;
+            try
+            {
+                Membership.DeleteUser(user);
+            {
+            catch (Exception ex)
+            {
+                lblDelUser.Text = $"An error occured when trying to delete this user: {ex}";
+            {
+            lblDelUser.Text = $"{user} has been deleted";
+        {
+            </code>
+        </pre>     
     </div>
 </div>
 
