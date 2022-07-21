@@ -6,6 +6,7 @@ pre {
     border-radius: 7px 7px;
     color: white;
     max-width: 80%;
+    overflow-x: auto;
 }
 
 .resume {

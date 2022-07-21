@@ -38,47 +38,47 @@
             <h4>HTML</h4>
             <pre>
             <code>
-        &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
-            &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxDelUser" <span class="ltBlue">Label</span>="Delete User" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
-            &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnDelUser" <span class="ltBlue">Text</span>="Delete" <span class="ltBlue">OnClick</span>="btnDelUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
-            &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblDelUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
-        &lt;<span class="blue">/div</span>&gt;
+    &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
+        &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxDelUser" <span class="ltBlue">Label</span>="Delete User" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnDelUser" <span class="ltBlue">Text</span>="Delete" <span class="ltBlue">OnClick</span>="btnDelUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
+        &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblDelUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
+    &lt;<span class="blue">/div</span>&gt;
             </code>
         </pre>
             <h4>CSS</h4>
             <pre>
             <code>
-            <span class="yellow">.box-r</span> {
-            <span class="ltBlue">width</span>: 50%;
-            <span class="ltBlue">min-width</span>: 325px;
-            <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
-            <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
-            <span class="ltBlue">border-radius</span>: 7px 8px;
-            <span class="ltBlue">background-color</span>: white;
-            <span class="ltBlue">padding</span>: 2em;
-            <span class="ltBlue">font-size</span>: 20px;
-            <span class="ltBlue">margin-left</span>: auto;
-            <span class="ltBlue">margin-right</span>: auto;
-            <span class="ltBlue">text-align</span>: center;
-        }
+    <span class="yellow">.box-r</span> {
+        <span class="ltBlue">width</span>: 50%;
+        <span class="ltBlue">min-width</span>: 325px;
+        <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
+        <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
+        <span class="ltBlue">border-radius</span>: 7px 8px;
+        <span class="ltBlue">background-color</span>: white;
+        <span class="ltBlue">padding</span>: 2em;
+        <span class="ltBlue">font-size</span>: 20px;
+        <span class="ltBlue">margin-left</span>: auto;
+        <span class="ltBlue">margin-right</span>: auto;
+        <span class="ltBlue">text-align</span>: center;
+    }
         </code>
         </pre>
             <h4>C#</h4>
             <pre>
             <code>
-            <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
+    <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
+    {
+        <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
+        <span class="vsPurple">try</span>
         {
-            <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
-            <span class="vsPurple">try</span>
-            {
-            <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
-            {
-            <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
-            {
-                lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
-            {
-            lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
+        <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
         {
+        <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
+        {
+            lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
+        {
+        lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
+    {
             </code>
         </pre>
         </div>
