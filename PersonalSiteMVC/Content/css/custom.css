@@ -1,6 +1,13 @@
 ﻿body {
 }
 
+pre {
+    background-color: #1e1e1e; /*#343a40; black;#f2eded; #e5e5e5;#c1c7c9;*/
+    border-radius: 7px 7px;
+    color: white;
+    max-width: 80%;
+}
+
 .resume {
     padding: 7em 0;
     clear: both;
@@ -185,8 +192,27 @@ input.form-control {
         color: #253259;
     }
 
-    /* Tabbing CSS */
-.divTab1 {
-    margin: 0, 0, 0, 1.5rem!important;       
-    padding: 0, 0, 0, 1.5rem!important;
+/* Font CSS for Examples*/
+.blue {
+    color: #007acc; /*#FF0E70C0; #4e56ed; blue;*/
+}
+
+.ltBlue {
+    color: lightskyblue;/*#FFC9DEF5; #21d8de; deepskyblue; #00a4db;*/
+}
+
+.yellow {
+    color:  #EEDC83; /*#fdd017; #FFE5C365;*/ 
+}
+
+.vsGreen {
+    color: #3DB489;
+}
+
+.vsOrange {
+    color: #F9A603;
+}
+
+.vsPurple {
+    color: #f8dafe;
 }

@@ -2,8 +2,17 @@
 @{
     ViewBag.Title = "Code Examples";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 }
+<style>
+    span.green {
+        color: green;
+    }
 
+    span.red {
+        color: red;
+    }
+</style>
 <h2>Code Examples</h2>
 <div class="pl-3">
     <h3>Delete a user:</h3>
@@ -14,50 +23,78 @@
             replacing < with &lt; or &60; and > with &gt;&gt; or &62;  *@
         <h4>HTML</h4>
         <pre>
-            <code>
-        &lt;div class="box-r"&gt;
-            &lt;telerik:RadTextBox runat="server" ID="boxDelUser" Label="Delete User" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;
-            &lt;telerik:RadButton runat="server" ID="btnDelUser" Text="Delete" OnClick="btnDelUser_Click" Skin="Web20"&gt;&lt;/telerik:RadButton&gt;
-            &lt;telerik:RadLabel runat="server" ID="lblDelUser" Skin="Web20"&gt;&lt;/telerik:RadTextBox&gt;
-        &lt;/div&gt;
+        <code>
+        &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
+            &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxDelUser" <span class="ltBlue">Label</span>="Delete User" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+            &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnDelUser" <span class="ltBlue">Text</span>="Delete" <span class="ltBlue">OnClick</span>="btnDelUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
+            &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblDelUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">/div</span>&gt;
             </code>
-        </pre>     
+        </pre>
         <h4>CSS</h4>
         <pre>
         <code>
-        .box-r {
-           width: 50%;
-           min-width: 325px;
-           border: solid 2px rgb(204,0,0);
-           box-shadow: rgba(107,0,0,.5) 7px 7px;
-           border-radius: 7px 8px;
-           background-color: white;
-           padding: 2em;
-           font-size: 20px;
-           margin-left: auto;
-           margin-right: auto;
-           text-align: center;
+        <span class="yellow">.box-r</span> {
+            <span class="ltBlue">width</span>: 50%;
+            <span class="ltBlue">min-width</span>: 325px;
+            <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
+            <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
+            <span class="ltBlue">border-radius</span>: 7px 8px;
+            <span class="ltBlue">background-color</span>: white;
+            <span class="ltBlue">padding</span>: 2em;
+            <span class="ltBlue">font-size</span>: 20px;
+            <span class="ltBlue">margin-left</span>: auto;
+            <span class="ltBlue">margin-right</span>: auto;
+            <span class="ltBlue">text-align</span>: center;
         }
         </code>
         </pre>
         <h4>C#</h4>
         <pre>
-            <code>
-        protected boid btnDelUser_Click(object sender, EventArgs e)
+        <code>
+            <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
         {
-            string user = boxDelUser.Text;
-            try
+            <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
+            <span class="vsPurple">try</span>
             {
-                Membership.DeleteUser(user);
+            <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
             {
-            catch (Exception ex)
+            <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
             {
-                lblDelUser.Text = $"An error occured when trying to delete this user: {ex}";
+                lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
             {
-            lblDelUser.Text = $"{user} has been deleted";
+            lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
         {
             </code>
-        </pre>     
+        </pre>
     </div>
 </div>
 
+
+<script>
+    /* This function will allow you to process DOM Trees
+       and run a defined function on each Node. 
+    const textWalker = function (node, callback) {
+        const nodes = [node];
+        while (nodes.length > 0) {
+            node = nodes.shift();
+            const children = [...node.childNodes];
+            for (let i = 0; i < children.length; i++) {
+                var child = children[i];
+                if (child.nodeType === HTMLElement.TEXT_NODE)
+                    callback(child);
+                else
+                    nodes.push(child);
+            }
+        }
+    };*/
+    /*  This JS adds to the HTML instead of just changing the color
+    $(document).ready(function () {
+        $("pre").each(function () {
+            $(this).html($(this).html().replace(/div/g, "<span class='green'>div</span>"));
+            $(this).html($(this).html().replace(/class/g, "<span class='red'>class</span>"));
+            //$(this).html($(this).html().add.html("class='red'"));
+        });
+    });*/
+
+</script>
