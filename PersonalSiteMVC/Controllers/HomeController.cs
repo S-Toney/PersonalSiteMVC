@@ -113,11 +113,12 @@ namespace PersonalSiteMVC.Controllers
         [HttpPost]
         public ActionResult TestErrorWriteToDB_Click(object sender, EventArgs e)
         {
+            /* Testing the Error Writing to DB functionality */
             Exception ex = new Exception();
             PSDataLayer PSDL = new PSDataLayer();
             PSDL.ErrorMessageWriter(ex, "Testing Error writing connection to DB", "testing", PSDL.ApplicationName);
             //throw;
-            return View(); 
+            return RedirectToAction("Index"); 
         }
     }
 }
