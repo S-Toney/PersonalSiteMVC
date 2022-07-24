@@ -6,13 +6,16 @@ using System.Web.Mvc;
 using System.Net.Mail;
 using System.Net;
 using PersonalSiteMVC.Models;
+using DataLayer;
 
 namespace PersonalSiteMVC.Controllers
 {
+    
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -105,6 +108,16 @@ namespace PersonalSiteMVC.Controllers
 
             ViewData["delUserHtml"] = "does \n it \n work \n \"now\"<telerik:RadTextBox runat=\"server\" ID=\"boxDelUser\" Text=\"Delete User\" Skin=\"Web20\"></telerik:RadTextBox>";//"<div>\n<telerik:RadTextBox runat=\"server\" ID=\"boxDelUser\" Text=\"Delete User\" Skin=\"Web20\"></telerik:RadTextBox>";
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult TestErrorWriteToDB_Click(object sender, EventArgs e)
+        {
+            Exception ex = new Exception();
+            PSDataLayer PSDL = new PSDataLayer();
+            PSDL.ErrorMessageWriter(ex, "Testing Error writing connection to DB", "testing", PSDL.ApplicationName);
+            //throw;
+            return View(); 
         }
     }
 }
