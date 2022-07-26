@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\APIsController.cs" />
     <Compile Include="InvalidGoogleCaptchaLabel.cs" />
     <Compile Include="GoogleCaptchaHelper.cs" />
     <Compile Include="GoogleCAPTCHA.cs" />
@@ -244,6 +245,7 @@
     <Content Include="Views\Home\Thumbnail.cshtml" />
     <Content Include="Views\Home\Undeliverable.cshtml" />
     <Content Include="Views\Home\Examples.cshtml" />
+    <Content Include="Views\APIs\ZipCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
