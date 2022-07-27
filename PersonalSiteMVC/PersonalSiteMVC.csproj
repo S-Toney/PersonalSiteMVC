@@ -246,6 +246,7 @@
     <Content Include="Views\Home\Undeliverable.cshtml" />
     <Content Include="Views\Home\Examples.cshtml" />
     <Content Include="Views\APIs\ZipCode.cshtml" />
+    <Content Include="Views\APIs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

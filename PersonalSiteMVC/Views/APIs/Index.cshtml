@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "APIs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="container-fluid p-0">
+    <!-- About-->
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">
+                S. Tessa
+                <span class="text-primary">Toney</span>
+            </h1>
+            <div class="subheading mb-5">
+                @*4849 NW Rochester Rd · Topeka, KS 66617 ·*@ (210) 918-0491 ·
+                <a href="mailto:s.l.toney@outlook.com">s.l.toney@outlook.com</a>
+            </div>
+            <!--<p class="lead mb-5">I am experienced with buiding responsive web pages that can be consumed as easily on a mobile devices as on traditional PCs. Teamwork is key to success and I have worked with teams, both local and international. Coordination and orginization are strong points of mine that allows me to assist in keeping out team focused and on track.</p>-->
+            <div class="social-icons slide">
+                <a class="social-icon" href="http://www.linkedin.com/in/s-tessa-toney" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/S-Toney" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="https://twitter.com/STessaToney1" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social-icon" href="https://stackoverflow.com/users/14554997/tessa" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            </div>
+        </div>
+
+    </section>
+    <hr class="m-0" />
+    <!-- APIs -->
+    <div class="ml-5">
+        <!-- USPS Zip Code https://www.usps.com/business/web-tools-apis/address-information-api.htm -->
+        <section id="USPSZipCode" class="mt-3 mb-3">
+            <h4>USPS Web Tools - Address Information</h4>
+            <div class="">
+                <label id="lblZip" class="mr-2 w-70 text-right">Zip Code</label><input id="Zip" class="ml-2" /><br />
+                <label id="lblCity" class="mr-2 w-70 text-right">City</label><input id="City" class="ml-2" readonly="readonly"/><br />
+                <label id="lblState" class="mr-2 w-70 text-right" >State</label><input id="State" class="ml-2" readonly="readonly"/>
+            </div>
+        </section>
+    </div>
+</main>

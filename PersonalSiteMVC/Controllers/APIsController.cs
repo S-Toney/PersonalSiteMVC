@@ -9,6 +9,10 @@ namespace PersonalSiteMVC.Controllers
     public class APIsController : Controller
     {
         // GET: APIs
+        public ActionResult Index()
+        {
+            return View();
+        }
         public ActionResult ZipCode()
         {
             return View();
