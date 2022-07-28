@@ -30,7 +30,6 @@
     <hr class="m-0" />
     <div class="ml-5">
         <h2>Delete a User</h2>
-        @*<div class="pl-3">*@
         <div class="border-dark p-3">
             <p>This was put into a .NET Framework project using Webforms and Telerik UI Ajax. Delete a user from the database on all related membership tables.</p>
 
@@ -49,36 +48,152 @@
             <h4>CSS</h4>
             <pre>
             <code>
-            <span class="yellow">.box-r</span> {
-            <span class="ltBlue">width</span>: 50%;
-            <span class="ltBlue">min-width</span>: 325px;
-            <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
-            <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
-            <span class="ltBlue">border-radius</span>: 7px 8px;
-            <span class="ltBlue">background-color</span>: white;
-            <span class="ltBlue">padding</span>: 2em;
-            <span class="ltBlue">font-size</span>: 20px;
-            <span class="ltBlue">margin-left</span>: auto;
-            <span class="ltBlue">margin-right</span>: auto;
-            <span class="ltBlue">text-align</span>: center;
+    <span class="yellow">.box-r</span> {
+        <span class="ltBlue">width</span>: 50%;
+        <span class="ltBlue">min-width</span>: 325px;
+        <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
+        <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
+        <span class="ltBlue">border-radius</span>: 7px 8px;
+        <span class="ltBlue">background-color</span>: white;
+        <span class="ltBlue">padding</span>: 2em;
+        <span class="ltBlue">font-size</span>: 20px;
+        <span class="ltBlue">margin-left</span>: auto;
+        <span class="ltBlue">margin-right</span>: auto;
+        <span class="ltBlue">text-align</span>: center;
     }
         </code>
         </pre>
             <h4>C#</h4>
             <pre>
             <code>
-            <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
+    <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
     {
-            <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
-            <span class="vsPurple">try</span>
+        <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
+        <span class="vsPurple">try</span>
         {
             <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
-        {
-            <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
+        }
+        <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
         {
             lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
-        {
+        }
         lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
+    }
+            </code>
+        </pre>
+        </div>
+        <h2>Create a User Role</h2>
+        <div class="border-dark p-3">
+            <p>This was put into a .NET Framework project using Webforms and Telerik UI Ajax. Create a User Role in the database.</p>
+
+            @* @(new HtmlString(ViewData["delUserHtml"].ToString()))
+                replacing < with &lt; or &60; and > with &gt;&gt; or &62;  *@
+            <h4>HTML</h4>
+            <pre>
+            <code>
+    &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box"&gt;
+        &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxCreateRole" <span class="ltBlue">Label</span>="Enter new User Role name" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnCreateRole" <span class="ltBlue">Text</span>="Create Role" <span class="ltBlue">OnClick</span>="btnCreateRole_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
+        &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblCreateRole" <span class="ltBlue">Skin</span>="Web20" &gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
+    &lt;<span class="blue">/div</span>&gt;
+                </code>
+        </pre>
+            <h4>CSS</h4>
+            <pre>
+            <code>
+    <span class="yellow">.box</span> {
+        <span class="ltBlue">width</span>: 50%;
+        <span class="ltBlue">min-width</span>: 325px;
+        <span class="ltBlue">border</span>: solid 2px rgb(0,37,105);
+        <span class="ltBlue">box-shadow</span>: rgba(0,37,105,.5) 7px 7px;
+        <span class="ltBlue">border-radius</span>: 7px 8px;
+        <span class="ltBlue">background-color</span>: white;
+        <span class="ltBlue">padding</span>: 2em;
+        <span class="ltBlue">font-size</span>: 20px;
+        <span class="ltBlue">margin-left</span>: auto;
+        <span class="ltBlue">margin-right</span>: auto;
+        <span class="ltBlue">text-align</span>: center;
+    }
+        </code>
+        </pre>
+            <h4>C#</h4>
+            <pre>
+                <code>
+    <span class="blue">protected void</span> <span class="yellow">btnCreateRole_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
+    {
+        <span class="blue">string</span> <span class="ltBlue">newRoleName</span> = boxCreateUser.Text.<span class="yellow">Trim</span>();
+        <span class="vsPurple">try</span>
+        {
+            <span class="vsPurple">if</span> (!<span class="vsGreen">Roles</span>.<span class="yellow">RoleExists</span>(<span class="ltBlue">newRoleName</span>)
+            {
+                <span class="vsGreen">Roles</span>.<span class="yellow">CreateRole</span>(<span class="ltBlue">newRoleName</span>);
+            }
+            <span class="vsPurple">else</span>
+            {
+                lblCreateRole.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">newRoleName</span>} <span class="vsOrange">already exists."</span>;
+            }
+        }
+        <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
+        {
+            lblCreateRole.Text = <span class="vsOrange">$"An error occured when trying to create this role:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
+        }
+        lblCreateRole.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">newRoleName</span>} <span class="vsOrange">has been created."</span>;
+        NewRoleName.Text = <span class="blue">string</span>.Empty;
+    }
+                </code>
+        </pre>
+        </div>
+        <h2>Create a User</h2>
+        @*<div class="pl-3">*@
+        <div class="border-dark p-3">
+            <p>This was put into a .NET Framework project using Webforms and Telerik UI Ajax. Creae a user in the database on all related membership tables.</p>
+
+            @* @(new HtmlString(ViewData["delUserHtml"].ToString()))
+                replacing < with &lt; or &60; and > with &gt;&gt; or &62;  *@
+            <h4>HTML</h4>
+            <pre>
+                <code>
+    &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
+        &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxUserName" <span class="ltBlue">Label</span>="Enter Username" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxPassword" <span class="ltBlue">Label</span>="Enter Password" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnCreateUser" <span class="ltBlue">Text</span>="Create User" <span class="ltBlue">OnClick</span>="btnCreateUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
+        &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblCreateUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
+    &lt;<span class="blue">/div</span>&gt;
+                </code>
+        </pre>
+            <h4>CSS</h4>
+            <pre>
+            <code>
+    <span class="yellow">.box-r</span> {
+        <span class="ltBlue">width</span>: 50%;
+        <span class="ltBlue">min-width</span>: 325px;
+        <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
+        <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
+        <span class="ltBlue">border-radius</span>: 7px 8px;
+        <span class="ltBlue">background-color</span>: white;
+        <span class="ltBlue">padding</span>: 2em;
+        <span class="ltBlue">font-size</span>: 20px;
+        <span class="ltBlue">margin-left</span>: auto;
+        <span class="ltBlue">margin-right</span>: auto;
+        <span class="ltBlue">text-align</span>: center;
+    }
+        </code>
+        </pre>
+            <h4>C#</h4>
+            <pre>
+            <code>
+    <span class="blue">protected void</span> <span class="yellow">btnCreateUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
+    {
+        <span class="blue">string</span> <span class="ltBlue">user</span> = boxCreateUser.Text;
+        <span class="vsPurple">try</span>
+        {
+            <span class="vsGreen">MembershipUser</span> <span class="ltBlue">newUser</span> = <span class="vsGreen">MembershipUser</span>.<span class="yellow">CreateUser</span>(boxUserName.Text, boxPassword.Text);
+        {
+        <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
+        {
+            lblCreateUser.Text = <span class="vsOrange">$"An error occured when trying to create this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
+        {
+        lblCreateUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been created"</span>;
     {
             </code>
         </pre>
@@ -88,97 +203,97 @@
 </div>
 <!-- Bootstrap Accordian that can be implimented when there are multiple examples -->
 @*<div class="container">
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        Delete a User (ASP.NET Identity)
-                    </a>
-                </h3>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <p>This was put into a .NET Framework project using Webforms and Telerik UI Ajax. Delete a user from the database on all related membership tables.</p>
-                    <h4>HTML</h4>
-                    <pre>
-                    <code>
-    &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
-        &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxDelUser" <span class="ltBlue">Label</span>="Delete User" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
-        &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnDelUser" <span class="ltBlue">Text</span>="Delete" <span class="ltBlue">OnClick</span>="btnDelUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
-        &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblDelUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
-    &lt;<span class="blue">/div</span>&gt;
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Delete a User (ASP.NET Identity)
+                        </a>
+                    </h3>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>This was put into a .NET Framework project using Webforms and Telerik UI Ajax. Delete a user from the database on all related membership tables.</p>
+                        <h4>HTML</h4>
+                        <pre>
+                        <code>
+        &lt;<span class="blue">div</span> <span class="ltBlue">class</span>="box-r"&gt;
+            &lt;<span class="blue">telerik:RadTextBox</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="boxDelUser" <span class="ltBlue">Label</span>="Delete User" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadTextBox</span>&gt;
+            &lt;<span class="blue">telerik:RadButton</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="btnDelUser" <span class="ltBlue">Text</span>="Delete" <span class="ltBlue">OnClick</span>="btnDelUser_Click" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;<span class="blue">/telerik:RadButton</span>&gt;
+            &lt;<span class="blue">telerik:RadLabel</span> <span class="ltBlue">runat</span>="server" <span class="ltBlue">ID</span>="lblDelUser" <span class="ltBlue">Skin</span>="Web20"&gt;&lt;/<span class="blue">telerik:RadTextBox</span>&gt;
+        &lt;<span class="blue">/div</span>&gt;
+                </code>
+            </pre>
+                        <h4>CSS</h4>
+                        <pre>
+                        <code>
+                        <span class="yellow">.box-r</span> {
+                        <span class="ltBlue">width</span>: 50%;
+                        <span class="ltBlue">min-width</span>: 325px;
+                        <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
+                        <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
+                        <span class="ltBlue">border-radius</span>: 7px 8px;
+                        <span class="ltBlue">background-color</span>: white;
+                        <span class="ltBlue">padding</span>: 2em;
+                        <span class="ltBlue">font-size</span>: 20px;
+                        <span class="ltBlue">margin-left</span>: auto;
+                        <span class="ltBlue">margin-right</span>: auto;
+                        <span class="ltBlue">text-align</span>: center;
+        }
             </code>
-        </pre>
-                    <h4>CSS</h4>
-                    <pre>
-                    <code>
-                    <span class="yellow">.box-r</span> {
-                    <span class="ltBlue">width</span>: 50%;
-                    <span class="ltBlue">min-width</span>: 325px;
-                    <span class="ltBlue">border</span>: solid 2px rgb(204,0,0);
-                    <span class="ltBlue">box-shadow</span>: rgba(107,0,0,.5) 7px 7px;
-                    <span class="ltBlue">border-radius</span>: 7px 8px;
-                    <span class="ltBlue">background-color</span>: white;
-                    <span class="ltBlue">padding</span>: 2em;
-                    <span class="ltBlue">font-size</span>: 20px;
-                    <span class="ltBlue">margin-left</span>: auto;
-                    <span class="ltBlue">margin-right</span>: auto;
-                    <span class="ltBlue">text-align</span>: center;
-    }
-        </code>
-        </pre>
-                    <h4>C#</h4>
-                    <pre>
-                    <code>
-                    <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
-    {
-                    <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
-                    <span class="vsPurple">try</span>
+            </pre>
+                        <h4>C#</h4>
+                        <pre>
+                        <code>
+                        <span class="blue">protected void</span> <span class="yellow">btnDelUser_Click</span>(<span class="blue">object</span> <span class="ltBlue">sender</span>, <span class="vsGreen">EventArgs</span> <span class="ltBlue">e</span>)
         {
-                    <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
+                        <span class="blue">string</span> <span class="ltBlue">user</span> = boxDelUser.Text;
+                        <span class="vsPurple">try</span>
+            {
+                        <span class="vsGreen">Membership</span>.<span class="yellow">DeleteUser</span>(<span class="ltBlue">user</span>);
+            {
+                        <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
+            {
+                lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
+            {
+            lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
         {
-                    <span class="vsPurple">catch</span> (<span class="vsGreen">Exception</span> <span class="ltBlue">ex</span>)
-        {
-            lblDelUser.Text = <span class="vsOrange">$"An error occured when trying to delete this user:</span> {<span class="ltBlue">ex</span>}<span class="vsOrange">"</span>;
-        {
-        lblDelUser.Text = <span class="vsOrange">$"</span>{<span class="ltBlue">user</span>} <span class="vsOrange">has been deleted"</span>;
-    {
-            </code>
-        </pre>
+                </code>
+            </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                        Collapsible Group Item #2
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                        Collapsible Group Item #3
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>*@
+    </div>*@
 @*</div>*@
 <script>
     /* This function will allow you to process DOM Trees
