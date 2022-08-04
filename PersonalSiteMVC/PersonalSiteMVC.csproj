@@ -184,10 +184,16 @@
     <Content Include="Content\img\fte.png" />
     <Content Include="Content\img\isaac.jpg" />
     <Content Include="Content\img\james.jpg" />
+    <Content Include="Content\img\jBurk.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\john-swift.jpg" />
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
+    <Content Include="Content\img\mRoush.jfif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\NSCS_Logo_Smaller.png" />
     <Content Include="Content\img\nsls-logo.png" />
     <Content Include="Content\img\sac.png" />
