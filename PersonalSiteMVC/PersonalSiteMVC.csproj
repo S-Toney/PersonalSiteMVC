@@ -181,6 +181,9 @@
     <Content Include="Content\img\Chelsea.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\img\ChelseaEmail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\cum-laude-medal-front.jpg" />
     <Content Include="Content\img\david-see.jpg" />
     <Content Include="Content\img\davidSee.jpg" />
