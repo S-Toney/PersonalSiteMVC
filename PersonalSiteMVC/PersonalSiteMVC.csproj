@@ -178,6 +178,9 @@
     </None>
     <Content Include="Content\img\CentriqAttendance.png" />
     <Content Include="Content\img\CentriqCompletion.png" />
+    <Content Include="Content\img\Chelsea.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\img\cum-laude-medal-front.jpg" />
     <Content Include="Content\img\david-see.jpg" />
     <Content Include="Content\img\davidSee.jpg" />
@@ -191,7 +194,7 @@
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
     <Content Include="Content\img\michaelBell.jpg" />
-    <Content Include="Content\img\mRoush.jfif">
+    <Content Include="Content\img\mRoush.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\img\NSCS_Logo_Smaller.png" />
