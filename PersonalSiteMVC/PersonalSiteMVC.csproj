@@ -190,9 +190,7 @@
     <Content Include="Content\img\fte.png" />
     <Content Include="Content\img\isaac.jpg" />
     <Content Include="Content\img\james.jpg" />
-    <Content Include="Content\img\jBurk.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\img\jBurk.png" />
     <Content Include="Content\img\john-swift.jpg" />
     <Content Include="Content\img\john.jpg" />
     <Content Include="Content\img\johnSwift.jpg" />
